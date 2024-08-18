@@ -17,35 +17,82 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </header>
-<section id="home" class="hero">
-    <div class="container">
-        <h2>Welcome to KFC</h2>
-        <p>Enjoy our delicious fried chicken and more!</p>
-        <img src="images/th.jpg" alt="Fried Chicken">
-    </div>
-</section>
+    <script>
+        let slideIndex = 0;
+showSlides();
 
-<section id="menu">
-    <div class="container">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <img src="images/th (1).jpg" alt="Chicken Bucket">
-            <h3>Bucket of Chicken</h3>
-            <p>Our classic bucket of fried chicken, crispy and delicious.</p>
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+}
+
+function plusSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    slideIndex += n;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+    </script>
+<main>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/th (7).jpg" alt="History">
+            <div class="text">
+                <h2>Our History</h2>
+                <p>KFC was founded by Colonel Harland Sanders in 1952 with a secret blend of 11 herbs and spices.</p>
+            </div>
         </div>
-        <div class="menu-item">
-            <img src="images/th (3).jpg" alt="Chicken Sandwich">
-            <h3>Chicken Sandwich</h3>
-            <p>Juicy chicken breast with pickles and mayo, served on a bun.</p>
+
+        <div class="slide fade">
+            <img src="images/th (8).jpg" alt="Mission">
+            <div class="text">
+                <h2>Our Mission</h2>
+                <p>Our mission is to deliver the best quality food with exceptional service to our customers.</p>
+            </div>
         </div>
+
+        <div class="slide fade">
+            <img src="images/th (9).jpg" alt="Values">
+            <div class="text">
+                <h2>Core Values</h2>
+                <p>We are committed to quality, customer satisfaction, and community engagement.</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <img src="/images/th (6).jpg" alt="Team">
+            <div class="text">
+                <h2>Meet Our Team</h2>
+                <p>Our team is dedicated to providing the best dining experience with a friendly and professional approach.</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <img src="images/global.jpg" alt="Global Presence">
+            <div class="text">
+                <h2>Global Presence</h2>
+                <p>With thousands of locations in over 150 countries, KFC is a global brand loved worldwide.</p>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-</section>
-
-<section id="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>KFC was founded by Colonel Harland Sanders in 1952, known for our secret blend of 11 herbs and spices. We’re dedicated to serving high-quality, delicious fried chicken around the world.</p>
-    </div>
-</section>
-
-
+</main>
