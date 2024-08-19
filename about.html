@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>KFC Landing Page | Responsive Design</title>
-  <link href="style.css" rel="stylesheet">
-</head>
+  <link href="./style.css" rel="stylesheet">
+ 
 <body>
   <section class="main">
     <header>
@@ -17,113 +17,64 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </header>
-    <script>
-        let slideIndex = 0;
-showSlides();
+    <!---------------------slider-------------------------------->
 
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change slide every 5 seconds
-}
+    <div class="slider-container">
 
-function plusSlides(n) {
-    let slides = document.getElementsByClassName("slide");
-    slideIndex += n;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    if (slideIndex < 1) {
-        slideIndex = slides.length;
-    }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-
-}
-    </script>
+      <div class="slides">
+        
     
+        <img src="./images/KFC_X_Chrissy_Teigen_Mothers_Day_Menu.webp" alt="">
+        <img src="./images/KFC_Saucy_Nuggets (1).webp" alt="">
+        <img src="./images/KFC_X_Chrissy_Teigen_Mothers_Day_Menu.webp" alt="">
+      </div>
 
+      <div class="buttons">
+        <span class="next">&#10095;</span>
+        <span class="prev">&#10094;</span>
+      </div>
 
-<main>
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <img src="images/history.jpg" alt="History">
-                <div class="text">
-                    <h2>Our History</h2>
-                    <p>KFC was founded by Colonel Harland Sanders in 1952 with a secret blend of 11 herbs and spices.</p>
-                </div>
-            </div>
+      <div class="dot-container">
+        <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+        <div class="dot" attr="1" onclick="switchImage(this)"></div>
+        <div class="dot" attr="2" onclick="switchImage(this)"></div>
+      </div>
 
-            <div class="slide fade">
-                <img src="images/mission.jpg" alt="Mission">
-                <div class="text">
-                    <h2>Our Mission</h2>
-                    <p>Our mission is to deliver the best quality food with exceptional service to our customers.</p>
-                </div>
-            </div>
-
-            <div class="slide fade">
-                <img src="images/values.jpg" alt="Values">
-                <div class="text">
-                    <h2>Core Values</h2>
-                    <p>We are committed to quality, customer satisfaction, and community engagement.</p>
-                </div>
-            </div>
-
-            <div class="slide fade">
-                <img src="images/team.jpg" alt="Team">
-                <div class="text">
-                    <h2>Meet Our Team</h2>
-                    <p>Our team is dedicated to providing the best dining experience with a friendly and professional approach.</p>
-                </div>
-            </div>
-
-            <div class="slide fade">
-                <img src="images/global.jpg" alt="Global Presence">
-                <div class="text">
-                    <h2>Global Presence</h2>
-                    <p>With thousands of locations in over 150 countries, KFC is a global brand loved worldwide.</p>
-                </div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-    </main>
+    </div> 
+      <h1>History of the Brand and Colonel Sanders</h1>
+      <p>KFC, a subsidiary of Yum! Brands, Inc. (NYSE: YUM.), is a global chicken restaurant brand with a rich, decades-long history of success and innovation. It all started with one cook, Colonel Harland Sanders, who created a finger lickin’ good recipe more than 80 years ago, a list of secret herbs and spices scratched out on the back of the door to his kitchen. Today we still follow his formula for success, with real cooks breading and freshly preparing our delicious chicken by hand in more than 26,000 restaurants in over 150 countries and territories around the world.</p>
+      <button class="location-button">view our location</button>
+    
+    
+    
      <!-- Footer Section -->
-<footer>
-    <div class="footer-container">
-        <div class="footer-section about">
-            <h2>About KFC</h2>
-            <p>Founded in 1952, KFC is known for its Original Recipe chicken with 11 herbs and spices. We are committed to delivering the best quality food and service.</p>
-        </div>
-        <div class="footer-section contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:info@kfc.com">info@kfc.com</a></p>
-            <p>Phone: <a href="tel:1800KFCLOVE">1-800-KFC-LOVE</a></p>
-            <p>Address: 1234 KFC Lane, Chicken City, KY 12345</p>
-        </div>
-        <div class="footer-section social">
-            <h2>Follow Us</h2>
-            <a href="https://facebook.com/KFC" target="_blank">Facebook</a>
-            <a href="https://twitter.com/KFC" target="_blank">Twitter</a>
-            <a href="https://instagram.com/KFC" target="_blank">Instagram</a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 KFC. All rights reserved.</p>
-    </div>
-  </footer>
-  
+     <footer>
+      <div class="footer-container">
+          <div class="footer-section about">
+              <h2>About KFC</h2>
+              <p>Founded in 1952, KFC is known for its Original Recipe chicken with 11 herbs and spices. We are committed to delivering the best quality food and service.</p>
+          </div>
+          <div class="footer-section contact">
+              <h2>Contact Us</h2>
+              <p>Email: <a href="mailto:info@kfc.com">info@kfc.com</a></p>
+              <p>Phone: <a href="tel:1800KFCLOVE">1-800-KFC-LOVE</a></p>
+              <p>Address: 1234 KFC Lane, Chicken City, KY 12345</p>
+          </div>
+          <div class="footer-section social">
+              <h2>Follow Us</h2>
+              <a href="https://facebook.com/KFC" target="_blank">Facebook</a>
+              <a href="https://twitter.com/KFC" target="_blank">Twitter</a>
+              <a href="https://instagram.com/KFC" target="_blank">Instagram</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 KFC. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+
+  <script src="./script.js"></script>
   </body>
   </html>
     
