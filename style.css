@@ -721,3 +721,44 @@ aside h2 {
   margin-top: 20px;
   width: 100%;
 }
+
+
+
+#Leaders{
+  padding: 30px 5%;
+}
+#Leaders h1{
+  color: white;
+  margin-bottom: 20px;
+}
+#Leaders .one {
+  display: flex;
+}
+#Leaders .one .two{
+  margin-right: 20px;
+}
+#Leaders .one .two img{
+  width: 100%;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+#Leaders .one .two img:hover{
+  filter: grayscale(0%);
+}
+.magy{
+  padding: 10px 5%;
+  display: flex;
+}
+.magy .two {
+  margin: 0 20px;
+}
+.magy .two img{
+  border-radius: 50%;
+  width: 250px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.magy .two img:hover{
+  filter: grayscale(0%);
+}
