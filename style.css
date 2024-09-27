@@ -372,7 +372,7 @@
   }
   .slider-container .dot-container{
     position: absolute;
-    transform: translateX(-50%);
+   transform: translateX(-50%); 
     left: 50%;
     bottom: 5px;
   }
@@ -464,7 +464,8 @@
     align-items: flex-start;
 }
 .contact-form, #map {
-    width: 48%;
+    width: 100%;
+    height: 100%;
 }
 .contact-form {
     margin-right: 2%;
@@ -728,7 +729,7 @@ aside h2 {
   padding: 30px 5%;
 }
 #Leaders h1{
-  color: white;
+  color: black;
   margin-bottom: 20px;
 }
 #Leaders .one {
@@ -746,19 +747,4 @@ aside h2 {
 #Leaders .one .two img:hover{
   filter: grayscale(0%);
 }
-.magy{
-  padding: 10px 5%;
-  display: flex;
-}
-.magy .two {
-  margin: 0 20px;
-}
-.magy .two img{
-  border-radius: 50%;
-  width: 250px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-.magy .two img:hover{
-  filter: grayscale(0%);
-}
+
